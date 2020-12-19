@@ -13,14 +13,14 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
+    background: linear-gradient(rgb(125, 231, 245), rgb(47, 58, 121));
     color: white;
 }
 
 .location {
     display: flex;
     height: 30vh;
-    width: 50%;
+    width: 90%;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
