@@ -13,7 +13,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(rgb(125, 231, 245), rgb(47, 58, 121));
+    background: linear-gradient(rgb(125, 197, 245), rgb(48, 47, 121));
     color: white;
 }
 
@@ -51,6 +51,7 @@ body {
 }
  
 .temperature {
+    position: relative;
     height: 30vh;
     display: flex;
     justify-content: space-around;
@@ -58,6 +59,11 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
+}
+.temperature p {
+    position: absolute;
+    top: 20px;
+    font-size: 14px;
 }
 
 .temperature-description{

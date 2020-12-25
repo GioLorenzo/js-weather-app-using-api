@@ -22,20 +22,19 @@ window.addEventListener("load", () => {
                 .then((resp) => resp.json())
                 .then(function (data) {
                     const info = JSON.parse(data.contents);
-                    console.log(info);
                     const temp = info.observations.location[0].observation[0].temperature;
                     const summary = info.observations.location[0].observation[0].description;
-                    const iconurl = info.observations.location[0].observation[0].iconLink;
+
                     function fahr() {
                         const cels = temp;
                         const conv = (cels * (9 / 5)) + 32;
                         return conv;
                     }
+
                     //Set DOM elements from the API
                     temperatureDegree.textContent = Math.round(temp);
                     temperatureDescription.textContent = summary;
                     locationTimezone.textContent = info.observations.location[0].city;
-                    weatherIcon.src = `${iconurl}`;
                     
                     //Change Temp
                     temperature.addEventListener('click', () => {
