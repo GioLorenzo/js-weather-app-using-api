@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
     let temperatureDegree = document.querySelector('.temperature-degree');
     let locationTimezone = document.querySelector('.location-timezone');
     let weatherIcon = document.querySelector('.weather-icon');
-    let temperature = document.querySelector('.temperature');
+    let temperature = document.querySelector('.degree-section');
     const temperatureSpan = document.querySelector('.temperature-unit');
 
 
