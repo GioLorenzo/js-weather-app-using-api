@@ -17,26 +17,37 @@ body {
     color: white;
 }
 
-.location {
+.main-container{
     display: flex;
-    height: 30vh;
-    width: 90%;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
-.icon {
-    margin: 50px;
+.location {
+    display: flex;
+    height: 40vh;
+    width: 90%;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
+.icon {
+    object-fit: contain;
+}
+
+.weather-icon{
+    height: 10rem;
+}
 .location-timezone {
     font-size: 80px;
-    overflow: hidden;
-    word-wrap:break-word;
+    overflow: visible;
     text-align: center;
-    line-height: 1em;
+    line-height: 1.3em;
 }
  
 .temperature {
@@ -44,11 +55,13 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.temperature {
     flex-direction: column;
     flex-wrap: wrap;
+    text-align: center;
+}
+
+.temperature-description{
+    text-transform: capitalize;
 }
 
 .degree-section {
