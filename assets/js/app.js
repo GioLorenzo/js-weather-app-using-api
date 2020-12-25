@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
             lat = position.coords.latitude;
             lon = position.coords.longitude;
 
-            const api = `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&metric=true&latitude=${lat}&longitude=${lon}&oneobservation=true&apiKey=a3NeguKdkV2KcEvS2qJJFDtM5v4UFrXqud3FTV1cLN0`;
+            const api = `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&metric=true&latitude=${lat}&longitude=${lon}&oneobservation=true&apiKey=wMVeVy93SzcEsGS8lyh5KphDVL8o42iCavSCY_Hw_0A`;
             const request = `https://api.allorigins.win/get?url=${encodeURIComponent(api)}`;
             
             fetch(request)
@@ -26,18 +26,25 @@ window.addEventListener("load", () => {
                     const temp = info.observations.location[0].observation[0].temperature;
                     const summary = info.observations.location[0].observation[0].description;
                     const iconurl = info.observations.location[0].observation[0].iconLink;
+                    function fahr() {
+                        const cels = temp;
+                        const conv = (cels * (9 / 5)) + 32;
+                        return conv;
+                    }
                     //Set DOM elements from the API
-                    temperatureDegree.textContent = temp;
+                    temperatureDegree.textContent = Math.round(temp);
                     temperatureDescription.textContent = summary;
                     locationTimezone.textContent = info.observations.location[0].city;
                     weatherIcon.src = `${iconurl}`;
                     
                     //Change Temp
                     temperature.addEventListener('click', () => {
-                        if (temperatureSpan.textContent === "F") {
-                            temperatureSpan.textContent = "C";
-                        } else {
+                        if (temperatureSpan.textContent === "C") {
                             temperatureSpan.textContent = "F";
+                            temperatureDegree.textContent = Math.round(fahr());
+                        } else {
+                            temperatureSpan.textContent = "C";
+                            temperatureDegree.textContent = Math.round(temp);
                         }
                     })
                 })
@@ -51,3 +58,4 @@ window.addEventListener("load", () => {
     }
 
 });
+
