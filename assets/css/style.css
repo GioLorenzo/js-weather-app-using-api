@@ -29,8 +29,8 @@ body {
     display: flex;
     height: 40vh;
     width: 90%;
-    justify-content: space-around;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
@@ -42,12 +42,16 @@ body {
 
 .weather-icon{
     height: 10rem;
+    display: none;
 }
 .location-timezone {
     font-size: 80px;
     overflow: visible;
     text-align: center;
     line-height: 1.3em;
+    margin: 0;
+    padding: 40px 0 40px 0;
+    border-bottom: 1px solid white;
 }
  
 .temperature {

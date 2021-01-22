@@ -22,6 +22,7 @@ window.addEventListener("load", () => {
                 .then((resp) => resp.json())
                 .then(function (data) {
                     const info = JSON.parse(data.contents);
+                    console.log(info.observations.location[0].observation);
                     const temp = info.observations.location[0].observation[0].temperature;
                     const summary = info.observations.location[0].observation[0].description;
 
