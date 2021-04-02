@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
             lat = position.coords.latitude;
             lon = position.coords.longitude;
             
-            const apiKey = 
+            const apiKey = 'wMVeVy93SzcEsGS8lyh5KphDVL8o42iCavSCY_Hw_0A';
             const api = `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&metric=true&latitude=${lat}&longitude=${lon}&oneobservation=true&apiKey=${apiKey}`;
             const request = `https://api.allorigins.win/get?url=${encodeURIComponent(api)}`;
             
