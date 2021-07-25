@@ -55,7 +55,7 @@ window.addEventListener("load", () => {
         });
 
     } else {
-        h5.textContent = "Hey! Your geolocation is not working DX"
+        h5.innerHTML = "Hey! Your geolocation is not working DX"
     }
 
 });
